@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# my mini ctf
 
-## Getting Started
+hello! this is a small ctf platform i wrote for terra week three!
+it's got team accounts, some challenges, flag submission, and a scoreboard!!
 
-First, run the development server:
+## current status
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+currently i've got auth working and the basis for challenges. more coming soon.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ok, so how do i test it?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+it'll be live on a railway page soon!
+for now, you can follow the following steps:
+1. clone the repo, then run `npm install`
+2. copy `.env.example` to `.env` then fill in the missing values
+3. run `npx prisma migrate dev` then `npx prisma generate` and THEN `npx tsx prisma/seed.ts`
+4. finally, run `npm run dev`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+if you want to test flag submission, just submit the intro challenge! it's intentionally free for people who've never played a ctf and for reviewers that wanna get through it fast.
 
-## Learn More
+## why'd you make this pal
 
-To learn more about Next.js, take a look at the following resources:
+i do web dev often, but i'm interested in cybersecurity too!!
+i participate and have participated in lots of ctfs. and i thought, "hey, i need practice writing challs. let's take advantage of terra forcing me to work anyway!" if you wanna know more about my cyber stuff check out my [personal website!](https://butteredtoast.pages.dev/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ...did you use ai?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+all the code is written by MEEEEE!!! however, since i've never used prisma, i used claude to explain concepts and give small EXAMPLE code snippets. what do i mean by example? basically, if i have the idea, "hmm, there's going to be a time discrepancy on login when the team exists and the password is wrong (because it takes a little to run compare) vs the team not existing (no compare)! that's bad! but how do i make it take longer?" i'm not going to ask claude, "claudeee helppp code the entire thing for meee ahhh" because that's atrocious. INSTEAD, i ask it for an example code block or explanation. it makes one about pizzas or something. it did actually do that once. and i can see the structure and write my OWN code! and *learn* (wow). i did also use it for code review and subsequent bug fixing, though, so feel free to slime me for that.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## what do i get if my team wins
+infinite glory
