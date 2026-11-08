@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// my stuff
+
+model Team {
+    id          Int         @id @default(autoincrement())
+    name        String         @unique
+    password    String
+    createdAt   DateTime    @default(now())
+    submissions Submission[]  
+}
+
+model Challenge {
+    id          Int         @id @default(autoincrement())
+    title       String
+    description String
+    category    String
+    points      Int
+    flagHash    String
+    submissions Submission[]
+    fileUrl     String?
+}
+
+model Submission {
+    id          Int         @id @default(autoincrement())
+    teamId      Int
+    team        Team        @relation(fields: [teamId], references: [id])
+    challengeId Int
+    challenge   Challenge   @relation(fields: [challengeId], references: [id])
+    correct     Boolean
+    submittedAt DateTime    @default(now())
+}
