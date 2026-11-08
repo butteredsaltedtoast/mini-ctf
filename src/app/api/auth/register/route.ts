@@ -26,14 +26,14 @@ export async function POST(req: Request) {
         return new Response("team name already taken", {status: 409});
 
     const hashedPassword = await hash(password, 10);
+    let newTeam;
     try {
-        let newTeam = await prisma.team.create({
+        newTeam = await prisma.team.create({
             data: {
                 name: username,
                 password: hashedPassword,
             }
         });
-        await startSession(newTeam.id)
     }
     catch (error) {
         if(await prisma.team.findUnique({where: {name: username}}))
@@ -41,5 +41,6 @@ export async function POST(req: Request) {
         console.error(error);
         return new Response("error creating team", {status: 500});
     }
+    await startSession(newTeam.id)
     return Response.json({ok: true}, {status: 201});
 }
