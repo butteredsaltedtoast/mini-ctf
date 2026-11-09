@@ -1,11 +1,10 @@
 # my mini ctf
 
 hello! this is a small ctf platform i wrote for terra week three!
-it's got team accounts, some challenges, flag submission, and a scoreboard!!
 
 ## current status
 
-currently i've got auth working and the basis for challenges. more coming soon.
+currently i've got register and login, flag submission, and a scoreboard. two playable challenges, web and intro.
 
 ## ok, so how do i test it?
 
