@@ -10,7 +10,7 @@ frontend pages exist too.
 
 ## ok, so how do i test it?
 
-it'll be live on a render page soon!
+it's live [here](https://mini-ctf-gzpn.onrender.com/)! it does reset because render sucks but... what can you do.
 for now, you can follow the following steps:
 
 1. clone the repo, then run `npm install`
