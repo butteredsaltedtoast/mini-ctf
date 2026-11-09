@@ -5,15 +5,17 @@ hello! this is a small ctf platform i wrote for terra week three!
 ## current status
 
 currently i've got register and login, flag submission, and a scoreboard. two playable challenges, web and intro.
+the other challenges are coming next week! for now, we've got web and intro, so have fun with those.
+frontend pages exist too.
 
 ## ok, so how do i test it?
 
-it'll be live on a railway page soon!
+it'll be live on a render page soon!
 for now, you can follow the following steps:
 
 1. clone the repo, then run `npm install`
 2. copy `.env.example` to `.env` then fill in the missing values
-3. run `npx prisma migrate dev` then `npx prisma generate` and THEN `npx tsx prisma/seed.ts`
+3. run `npx prisma migrate dev --config prisma7.config.ts` then `npx prisma generate --config prisma7.config.ts` and THEN `npx tsx prisma/seed.ts`
 4. finally, run `npm run dev`
 
 if you want to test flag submission, just submit the intro challenge! it's intentionally free for people who've never played a ctf and for reviewers that wanna get through it fast.
