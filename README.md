@@ -11,6 +11,7 @@ currently i've got auth working and the basis for challenges. more coming soon.
 
 it'll be live on a railway page soon!
 for now, you can follow the following steps:
+
 1. clone the repo, then run `npm install`
 2. copy `.env.example` to `.env` then fill in the missing values
 3. run `npx prisma migrate dev` then `npx prisma generate` and THEN `npx tsx prisma/seed.ts`
@@ -25,7 +26,8 @@ i participate and have participated in lots of ctfs. and i thought, "hey, i need
 
 ## ...did you use ai?
 
-all the code is written by MEEEEE!!! however, since i've never used prisma, i used claude to explain concepts and give small EXAMPLE code snippets. what do i mean by example? basically, if i have the idea, "hmm, there's going to be a time discrepancy on login when the team exists and the password is wrong (because it takes a little to run compare) vs the team not existing (no compare)! that's bad! but how do i make it take longer?" i'm not going to ask claude, "claudeee helppp code the entire thing for meee ahhh" because that's atrocious. INSTEAD, i ask it for an example code block or explanation. it makes one about pizzas or something. it did actually do that once. and i can see the structure and write my OWN code! and *learn* (wow). i did also use it for code review and subsequent bug fixing, though, so feel free to slime me for that.
+all the code is written by MEEEEE!!! however, since i've never used prisma, i used claude to explain concepts and give small EXAMPLE code snippets. what do i mean by example? basically, if i have the idea, "hmm, there's going to be a time discrepancy on login when the team exists and the password is wrong (because it takes a little to run compare) vs the team not existing (no compare)! that's bad! but how do i make it take longer?" i'm not going to ask claude, "claudeee helppp code the entire thing for meee ahhh" because that's atrocious. INSTEAD, i ask it for an example code block or explanation. it makes one about pizzas or something. it did actually do that once. and i can see the structure and write my OWN code! and _learn_ (wow). i did also use it for code review and subsequent bug fixing, though, so feel free to slime me for that.
 
 ## what do i get if my team wins
+
 infinite glory
